@@ -1,57 +1,31 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 export default function HomePage() {
   return (
-    <main
-      style={{
-        minHeight: "100vh",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        gap: "24px",
-        fontFamily: "Arial, sans-serif",
-        padding: "24px"
-      }}
-    >
-      <h1>MAMAkub</h1>
-
+    <main style={{ padding: '2rem', fontFamily: 'system-ui, sans-serif' }}>
+      <h1>🍜 MAMAkub</h1>
       <p>ระบบสั่งอาหารร้านมาม่าเกาหลี</p>
-
-      <div
-        style={{
-          display: "flex",
-          gap: "12px",
-          flexWrap: "wrap",
-          justifyContent: "center"
-        }}
-      >
-        <Link
-          href="/generate-qr"
-          style={{
-            padding: "12px 20px",
-            border: "1px solid #333",
-            borderRadius: "8px",
-            textDecoration: "none",
-            color: "#333"
-          }}
-        >
-          Generate QR
-        </Link>
-
-        <Link
-          href="/kitchen"
-          style={{
-            padding: "12px 20px",
-            border: "1px solid #333",
-            borderRadius: "8px",
-            textDecoration: "none",
-            color: "#333"
-          }}
-        >
-          Kitchen
-        </Link>
-      </div>
+      <hr style={{ margin: '1.5rem 0' }} />
+      <nav>
+        <ul style={{ display: 'flex', gap: '1rem', listStyle: 'none', padding: 0 }}>
+          <li>
+            <Link 
+              href="/generate-qr" 
+              style={{ padding: '0.5rem 1rem', background: '#0070f3', color: '#fff', borderRadius: '5px', textDecoration: 'none' }}
+            >
+              สร้าง QR Code (/generate-qr)
+            </Link>
+          </li>
+          <li>
+            <Link 
+              href="/kitchen" 
+              style={{ padding: '0.5rem 1rem', background: '#17c964', color: '#fff', borderRadius: '5px', textDecoration: 'none' }}
+            >
+              หน้าห้องครัว (/kitchen)
+            </Link>
+          </li>
+        </ul>
+      </nav>
     </main>
   );
 }
