@@ -1,23 +1,17 @@
-import Link from "next/link";
-
-export default function HomePage() {
-  return (
-    <main>
-      <h1>MAMAkub</h1>
-
-      <p>ระบบสั่งอาหารร้านมาม่าเกาหลี</p>
-
-      <div>
-        <Link href="/generate-qr">
-          Generate QR
-        </Link>
-
-        {" | "}
-
-        <Link href="/kitchen">
-          Kitchen
-        </Link>
-      </div>
-    </main>
-  );
+{
+  "name": "mamakub",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.48.0",
+    "next": "latest",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
 }
